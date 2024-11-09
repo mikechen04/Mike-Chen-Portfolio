@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mike Chen's Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Libre Franklin', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            position: relative;
+            color: rgba(255, 255, 255, 0.8); /* White text with 80% opacity */
+        }
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('sidetrackedday.jpg'); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.2; /* 20% opacity */
+            z-index: -1;
+        }
+        .top-bar {
+            background-image: url('sidetrackedday.jpg'); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: #fff;
+            padding: 15px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.8); /* White background with 80% opacity */
+            color: #000; /* Black text for better readability */
+            position: relative;
+            z-index: 1;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-image: url('sidetrackedday.jpg'); /* Ensure this path is correct */
+            background-size: cover;
+            background-position: bottom; /* Align the bottom of the image with the bottom of the footer */
+            background-repeat: no-repeat;
+            color: #fff;
+            position: relative;
+            z-index: 1;
+        }
+        .discord-icon {
+            vertical-align: middle;
+            margin-bottom: 3px; /* Adjust this value to move the image lower */
+        }
+    </style>
+</head>
+<body>
+
+<div class="top-bar">
+    <header>
+        <h1>Mike Chen</h1>
+    </header>
+
+    <nav>
+        <p> Computer Science B.S. Student @ University of California Santa Cruz</p>
+    </nav>
+</div>
+
+<main>
+    <p><img src="https://dcbadge.limes.pink/api/shield/153640661554298880" /></p>
+    <h2>About me</h2>
+    <p>Welcome to my website! I post all of my works & projects here.</p>
+
+    <h3>Languages</h3>
+    <p>Python ★★★☆☆ </p>
+    <p>JavaScript ★★★☆☆</p>
+    <p>HTML ★★☆☆☆</p>
+    <p>C ★★★★☆</p>
+    <p>C++ ★★★☆☆</p>
+</section>
+
+    <section id="home">
+        <h3>Websites</h3>
+        <p>aheriez.com - The website you are currently viewing.</p>
+
+    </section>
+
+    <section id="about">
+        <h3>Discord Bots <img src="discord.png" alt="Discord Bots" class="discord-icon" style="width: 20px; height: 20px;">  </h3>
+        <p><a href="https://github.com/mikechen04/mike-bot" target="_blank">MikeBot</a> - A general use Discord Bot with various QoL commands. Mainly made as an inside joke 😁 </p>
+    </section>
+
+    <h3>Roadmap</h3>
+    <p>• Create osu!Scheduler - A website for scheduling osu matches</p>
+    <p>• Create osu!TimeConverter - A website to convert any timezone to UTC.</p>
+    <p>• Finish MikeBot fully</p>
+    <p>• Update this website's designs with animated graphics</p>
+
+    <section id="contact">
+        <h3>Contact</h3>
+        <p>My preferred method of communicating is through Discord.</p>
+        <p>If your inquiry is more serious use my other socials! </p>
+        <button onclick="copyToClipboard('.ayame')">Discord - Click to copy!</button>
+        <p> </p>
+        <div class="copied-message" id="copiedMessage"></div>
+        <button onclick="copyToClipboard('mimichen@ucsc.edu')">University Email - Click to copy!</button>
+        <div class="copied-message" id="copiedMessage"></div>
+        <p> </p>
+        <button onclick="copyToClipboard('1027mikechen@gmail.com')">Personal Email - Click to copy!</button>
+        <div class="copied-message" id="copiedMessage"></div>
+        <p> </p>
+        <button onclick="window.open('https://github.com/mikechen04', '_blank')">GitHub - Click to go to website!</button>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Mike Chen. All rights reserved.</p>
+    <p>Credits: <a href="https://github.com/gitlimes/discord-md-badge?tab=readme-ov-file#readme" target="_blank">Discord Status</a></p>
+</footer>
+
+<script>
+    function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(function() {
+            var copiedMessage = document.getElementById('copiedMessage');
+            copiedMessage.style.display = 'block';
+            setTimeout(function() {
+                copiedMessage.style.display = 'none';
+            }, 2000);
+        }, function(err) {
+            console.error('Could not copy text: ', err);
+        });
+    }
+</script>
+
+</body>
+</html>
